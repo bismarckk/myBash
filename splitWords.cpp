@@ -26,8 +26,9 @@ void splitToWords(vector<const char*>& data)
     {
         
         data.push_back(v[i].c_str());
-        //cout<<data[i];
+        cout<<data[i];
     }
+        cout<<endl;
         data.push_back(NULL);   
     cin.clear();
 }

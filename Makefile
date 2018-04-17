@@ -1,7 +1,7 @@
 SHELL = /bin/sh
 EXEC = splitWords.o myFunctions.o execveStudy.o
 CXXFLAGS = -O0 -Wall  -I. -g
-LDFLAGS = -g -L.
+LDFLAGS = -g -L. -lpthread
 
 main: main.cpp libtest.a
 	$(CXX) $^ $(LDFLAGS) -o $@
@@ -13,4 +13,4 @@ libtest.a: $(EXEC)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	$(RM) *~ *.bak *.o *.so *.a main
+	$(RM) *~ *.bak *.o *.so *.a

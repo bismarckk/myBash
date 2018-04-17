@@ -27,14 +27,17 @@ int main (int argc, char *argv[])
             getcwd(buff, sizeof(buff));
             cout<<"\033[0;33m"<< buff << "$>> "<<"\033[0m";
             //myTerminal(pwdargs);
-            splitToWords(data);            
+            splitToWords(data);
+                        
             if(strcmp(data[0],"cd") == 0){
                   //cout<<"tego nie obsluguje\n";
                   if (data.size()>1){
+                        cout<<"\ndata[1] main: "<<data[1]<<endl;                                               
                         chdir(data[1]);
                   }
+                        
             }      
-            else myTerminal(data);
+            else{myTerminal(data);}
 
             data.clear();
       }
